@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/img/logo-recorte2.png">
+  <title>Planos e Preços | Controle Financeiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/marketing.css">
+</head>
+<body>
+  <div class="page">
+    <header class="container header">
+      <div class="brand">
+        <a href="index.html" style="display:flex; gap:10px; align-items:center; text-decoration:none;">
+          <img src="assets/img/logo-recorte2.png" alt="Logo do sistema">
+          <img src="assets/img/nome_logo-recorte2.png" alt="Controle Financeiro">
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html#recursos">Recursos</a>
+        <a href="index.html#planos">Planos</a>
+        <a href="index.html#fluxo">Como funciona</a>
+        <a href="index.html#seguranca">Segurança</a>
+        <div class="nav-actions">
+          <a class="btn btn-ghost btn-sm" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+          <a class="btn btn-primary btn-sm" href="index.html#planos">Escolher plano</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container" style="padding-bottom: 48px;">
+      <section class="section" style="padding-top: 28px;">
+        <h2 class="section-title">Planos que crescem com você</h2>
+        <p class="section-subtitle">Escolha um plano, pague via PIX (AbacatePay) e ative no seu login.</p>
+
+        <div class="feature-grid" style="margin-top: 24px;">
+          <div class="feature-card" style="border-radius: 22px;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+              <div>
+                <h3 style="font-size:18px;">Básico</h3>
+                <p style="margin-top:6px; color: var(--muted);">Ideal para uso pessoal e organização.</p>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 14.90</div>
+                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              </div>
+            </div>
+            <div style="height:12px"></div>
+            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
+              <li style="margin: 6px 0;">Controle de receitas e despesas</li>
+              <li style="margin: 6px 0;">Resumo mensal e saldo</li>
+              <li style="margin: 6px 0;">Categorias básicas</li>
+            </ul>
+            <div style="height:16px"></div>
+            <div class="hero-actions" style="gap:10px;">
+              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=basic'">Escolher Básico</a>
+              <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+            </div>
+          </div>
+
+          <div class="feature-card" id="plus" style="border-radius: 22px; border-color: rgba(60,200,120,0.35);">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+              <div>
+                <h3 style="font-size:18px;">Plus</h3>
+                <p style="margin-top:6px; color: var(--muted);">Ideal para análises e filtros avançados.</p>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 29.90</div>
+                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              </div>
+            </div>
+            <div style="height:12px"></div>
+            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
+              <li style="margin: 6px 0;">Gráficos mensais e anuais</li>
+              <li style="margin: 6px 0;">Comparação de períodos</li>
+              <li style="margin: 6px 0;">Filtros avançados no histórico</li>
+              <li style="margin: 6px 0;">Projeção de saldo</li>
+              <li style="margin: 6px 0;">Relatórios simples</li>
+            </ul>
+            <div style="height:16px"></div>
+            <div class="hero-actions" style="gap:10px;">
+              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=plus'">Escolher Plus</a>
+              <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+            </div>
+          </div>
+
+          <div class="feature-card" id="pro" style="border-radius: 22px;">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+              <div>
+                <h3 style="font-size:18px;">Pro</h3>
+                <p style="margin-top:6px; color: var(--muted);">Ideal para quem quer prioridade e evolução.</p>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 49.90</div>
+                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              </div>
+            </div>
+            <div style="height:12px"></div>
+            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
+              <li style="margin: 6px 0;">Tudo do Plus</li>
+              <li style="margin: 6px 0;">Base para recursos avançados (exportação, múltiplas contas)</li>
+              <li style="margin: 6px 0;">Prioridade em melhorias</li>
+            </ul>
+            <div style="height:16px"></div>
+            <div class="hero-actions" style="gap:10px;">
+              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=pro'">Escolher Pro</a>
+              <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta" style="margin-top: 28px;">
+          <div>
+            <h2>Pagamento via PIX e ativação automática</h2>
+            <p>Após o pagamento, você cria sua conta ou entra para ativar o plano automaticamente no sistema.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar no sistema</a>
+            <a class="btn btn-ghost" href="index.html">Voltar</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <span>Controle Financeiro · Todos os direitos reservados</span>
+    </footer>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+</body>
+</html>
