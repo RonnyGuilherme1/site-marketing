@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/img/logo-recorte2.png">
-  <title>Controle Financeiro - Orçamento pessoal simples e moderno</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/marketing.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/img/logo-recorte2.png" />
+
+  <title>Controle Financeiro — Controle de orçamento simples e moderno</title>
+  <meta name="description" content="Controle seu orçamento pessoal em minutos por dia. Registre receitas e despesas, acompanhe o saldo do ciclo e evolua para gráficos, insights, regras e relatórios por plano." />
+  <meta name="theme-color" content="#0f0f0f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Controle Financeiro" />
+  <meta property="og:description" content="Orçamento pessoal simples e moderno. Dashboard, lançamentos, gráficos, insights e automações por plano." />
+  <meta property="og:image" content="assets/img/logo-recorte2.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/marketing.css" />
 </head>
 <body>
   <div class="page">
     <header class="container header">
       <div class="brand">
-        <img src="assets/img/logo-recorte2.png" alt="Logo do sistema">
-        <img src="assets/img/nome_logo-recorte2.png" alt="Controle Financeiro">
+        <a href="index.html" class="brand-link" aria-label="Voltar ao início">
+          <img src="assets/img/logo-recorte2.png" alt="Logo do Controle Financeiro" />
+          <img src="assets/img/nome_logo-recorte2.png" alt="Controle Financeiro" />
+        </a>
       </div>
 
-      <nav class="nav">
-        <a href="#recursos">Recursos</a>
-        <a href="#planos">Planos</a>
-        <a href="#fluxo">Como funciona</a>
-        <a href="#seguranca">Segurança</a>
-        <a href="#contato">Contato</a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegação">
+        <div class="nav-links">
+          <a href="#recursos">Recursos</a>
+          <a href="#produto">Produto</a>
+          <a href="#planos">Planos</a>
+          <a href="#compra">Como comprar</a>
+          <a href="#faq">FAQ</a>
+          <a href="pricing.html">Preços</a>
+        </div>
+
         <div class="nav-actions">
-  <a class="btn btn-ghost btn-sm" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
-  <a class="btn btn-primary btn-sm" href="#planos">Escolher plano</a>
-</div>
+          <a class="btn btn-ghost btn-sm" href="javascript:void(0)" data-go="login">Entrar</a>
+          <a class="btn btn-primary btn-sm" href="javascript:void(0)" data-go="register-plus">Criar conta</a>
+        </div>
       </nav>
     </header>
 
     <main class="container">
-      <section class="hero">
+      <section class="hero" id="topo">
         <div class="fade-in">
           <div class="tagline"><span></span>Controle real do seu dinheiro</div>
-          <h1>Seu orçamento pessoal com visão clara de receitas, despesas e saldo projetado.</h1>
+          <h1>Seu orçamento pessoal com visão clara de receitas, despesas e saldo do ciclo.</h1>
           <p>
-            Registre entradas, organize despesas e entenda o saldo do ciclo com rapidez.
-            Uma interface limpa, focada no essencial e pronta para evoluir com gráficos, projeções e relatórios.
+            Registre entradas e saídas, acompanhe o que já foi pago e o que ainda está pendente e tome decisões com clareza.
+            Comece no essencial e evolua para <strong>gráficos, insights, regras e relatórios</strong> conforme seu plano.
           </p>
+
           <div class="hero-actions">
-  <a class="btn btn-primary" href="#planos">Ver planos</a>
-  <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar no sistema</a>
-</div>
+            <a class="btn btn-primary" href="javascript:void(0)" data-go="register-plus">Criar conta</a>
+            <a class="btn btn-ghost" href="pricing.html">Ver planos e preços</a>
+            <a class="btn btn-ghost" href="javascript:void(0)" data-go="login">Entrar</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-dot"></span>
+            Pagamento via PIX (AbacatePay) e ativação no seu login.
+          </div>
         </div>
 
-        <div class="hero-card rise">
+        <div class="hero-card rise" aria-label="Prévia do produto">
           <div class="hero-card-header">
             <strong>Visão geral do mês</strong>
-            <span class="pill">Saldo carregado</span>
+            <span class="pill">Saldo projetado</span>
           </div>
           <div class="card-grid">
             <div class="mini-card">
@@ -65,7 +91,7 @@
             <div class="mini-card">
               <h4>Saldo do ciclo</h4>
               <strong>R$ 2.690</strong>
-              <span>Projeção automática</span>
+              <span>Estimativa do período</span>
             </div>
             <div class="mini-card">
               <h4>Status</h4>
@@ -73,191 +99,293 @@
               <span>4 aguardando</span>
             </div>
           </div>
+
+          <div class="hero-card-footer">
+            <span class="muted">Dica:</span> troque por prints reais quando quiser — o layout já está pronto.
+          </div>
         </div>
       </section>
 
       <section class="section" id="recursos">
         <h2 class="section-title">Tudo que você precisa para gerir seu orçamento</h2>
         <p class="section-subtitle">
-          Cadastre receitas e despesas, acompanhe o pagamento real e tenha um resumo claro por data,
+          Cadastre receitas e despesas, acompanhe pagamento real e tenha um resumo claro por data,
           trimestre e ciclo financeiro.
         </p>
+
         <div class="feature-grid">
           <div class="feature-card">
             <h3>Lançamentos rápidos</h3>
-            <p>Registre receitas e despesas em poucos cliques com data, descrição, valor e status.</p>
+            <p>Registre receitas e despesas com data, descrição, valor e status.</p>
           </div>
           <div class="feature-card">
             <h3>Resumo por data</h3>
-            <p>Veja totais diários de entradas e saídas com saldo atualizado automaticamente.</p>
+            <p>Veja totais do dia com saldo projetado até o fim do ciclo.</p>
           </div>
           <div class="feature-card">
             <h3>Status inteligente</h3>
             <p>Controle despesas em andamento, não pagas e pagas com histórico completo.</p>
           </div>
           <div class="feature-card">
-            <h3>Saldo carregado</h3>
-            <p>Quando uma despesa é paga, o sistema grava a data real e carrega o saldo correto.</p>
-          </div>
-          <div class="feature-card">
             <h3>Visão trimestral</h3>
             <p>Cards por trimestre para enxergar evolução de receita, despesa e saldo.</p>
           </div>
           <div class="feature-card">
-            <h3>Acesso seguro</h3>
-            <p>Login com verificação de e-mail e acesso protegido aos dados do usuário.</p>
+            <h3>Gráficos e insights</h3>
+            <p>Entenda o comportamento do período e identifique onde ajustar o orçamento (Plus/Pro).</p>
           </div>
+          <div class="feature-card">
+            <h3>Regras e automação</h3>
+            <p>Crie regras para categorizar e ajustar lançamentos automaticamente (Plus/Pro).</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="produto">
+        <h2 class="section-title">Veja o sistema por dentro</h2>
+        <p class="section-subtitle">
+          Uma prévia do app: dashboard, lançamentos e regras/automação — tudo pensado para clareza, rapidez e controle
+          do orçamento.
+        </p>
+
+        <div class="shots-grid">
+          <article class="shot-card">
+            <div class="shot-frame shot-frame-img">
+              <img class="shot-img" src="assets/img/product/preview_dashboard.png" alt="Prévia do dashboard com visão trimestral" loading="lazy" />
+            </div>
+            <div class="shot-caption">
+              <h3>Dashboard + resumo por data</h3>
+              <p>Visão do mês e do ciclo: receitas do dia, despesas pendentes e saldo projetado.</p>
+            </div>
+          </article>
+
+          <article class="shot-card">
+            <div class="shot-frame shot-frame-img">
+              <img class="shot-img" src="assets/img/product/preview_entradas.png" alt="Prévia da tela de lançamento de entradas e despesas" loading="lazy" />
+            </div>
+            <div class="shot-caption">
+              <h3>Lançamentos e controle de status</h3>
+              <p>Cadastre receitas/despesas e marque o status correto para manter a projeção confiável.</p>
+            </div>
+          </article>
+
+          <article class="shot-card">
+            <div class="shot-frame shot-frame-img">
+              <img class="shot-img" src="assets/img/product/preview_regras.png" alt="Prévia da tela de regras e automações" loading="lazy" />
+            </div>
+            <div class="shot-caption">
+              <h3>Regras &amp; automações (Plus/Pro)</h3>
+              <p>Crie condições e ações para padronizar lançamentos e manter o histórico consistente.</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section" id="planos">
         <h2 class="section-title">Planos para começar simples e evoluir com análises</h2>
         <p class="section-subtitle">
-          O plano fica associado ao seu login. Você pode fazer upgrade a qualquer momento.
+          O plano fica associado ao seu login. Para comprar: crie sua conta, confirme o e-mail e pague via PIX.
         </p>
 
-        
-        <div class="feature-grid" style="margin-top: 24px;">
-          <div class="feature-card" style="border-radius: 22px;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+        <div class="plan-grid">
+          <div class="plan-card">
+            <div class="plan-head">
               <div>
-                <h3 style="font-size:18px;">Básico</h3>
-                <p style="margin-top:6px; color: var(--muted);">Ideal para uso pessoal e organização.</p>
+                <h3 class="plan-name">Básico</h3>
+                <p class="plan-tagline">Quem precisa do essencial no dia a dia.</p>
               </div>
-              <div style="text-align:right;">
-                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 14.90</div>
-                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              <div class="plan-price">
+                <div class="plan-value">R$ 14,90</div>
+                <div class="plan-period">por mês</div>
               </div>
             </div>
-            <div style="height:12px"></div>
-            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
-              <li style="margin: 6px 0;">Controle de receitas e despesas</li>
-              <li style="margin: 6px 0;">Resumo mensal e saldo</li>
-              <li style="margin: 6px 0;">Categorias básicas</li>
+            <ul class="plan-list">
+              <li>Dashboard com visão geral do mês</li>
+              <li>Resumo mensal de entradas e saídas</li>
+              <li>Lançamentos de receitas e despesas</li>
             </ul>
-            <div style="height:16px"></div>
-            <div class="hero-actions" style="gap:10px;">
-              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=basic'">Escolher Básico</a>
-              <a class="btn btn-ghost" href="pricing.html">Ver detalhes</a>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="javascript:void(0)" data-go="register-basic">Quero o Básico</a>
+              <a class="btn btn-ghost" href="javascript:void(0)" data-go="login">Já tenho conta</a>
             </div>
           </div>
 
-          <div class="feature-card" style="border-radius: 22px; border-color: rgba(60,200,120,0.35);">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+          <div class="plan-card plan-popular">
+            <div class="plan-badge">Mais popular</div>
+            <div class="plan-badge-sub">Recomendado para a maioria</div>
+            <div class="plan-head">
               <div>
-                <h3 style="font-size:18px;">Plus</h3>
-                <p style="margin-top:6px; color: var(--muted);">Ideal para análises e filtros avançados.</p>
+                <h3 class="plan-name">Plus</h3>
+                <p class="plan-tagline">Insights e automação inteligente.</p>
               </div>
-              <div style="text-align:right;">
-                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 29.90</div>
-                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              <div class="plan-price">
+                <div class="plan-value">R$ 29,90</div>
+                <div class="plan-period">por mês</div>
               </div>
             </div>
-            <div style="height:12px"></div>
-            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
-              <li style="margin: 6px 0;">Gráficos mensais e anuais</li>
-              <li style="margin: 6px 0;">Comparação de períodos</li>
-              <li style="margin: 6px 0;">Filtros avançados no histórico</li>
-              <li style="margin: 6px 0;">Projeção de saldo</li>
-              <li style="margin: 6px 0;">Relatórios simples</li>
+            <ul class="plan-list">
+              <li>Gráficos mensais e anuais</li>
+              <li>Insights e variações do período</li>
+              <li>Regras e automação no histórico</li>
             </ul>
-            <div style="height:16px"></div>
-            <div class="hero-actions" style="gap:10px;">
-              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=plus'">Escolher Plus</a>
-              <a class="btn btn-ghost" href="pricing.html#plus">Ver detalhes</a>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="javascript:void(0)" data-go="register-plus">Quero o Plus</a>
+              <a class="btn btn-ghost" href="pricing.html#comparativo">Comparar planos</a>
             </div>
           </div>
 
-          <div class="feature-card" style="border-radius: 22px;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+          <div class="plan-card">
+            <div class="plan-head">
               <div>
-                <h3 style="font-size:18px;">Pro</h3>
-                <p style="margin-top:6px; color: var(--muted);">Ideal para quem quer prioridade e evolução.</p>
+                <h3 class="plan-name">Pro</h3>
+                <p class="plan-tagline">Planejamento completo com projeção e relatórios.</p>
               </div>
-              <div style="text-align:right;">
-                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 49.90</div>
-                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              <div class="plan-price">
+                <div class="plan-value">R$ 49,90</div>
+                <div class="plan-period">por mês</div>
               </div>
             </div>
-            <div style="height:12px"></div>
-            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
-              <li style="margin: 6px 0;">Tudo do Plus</li>
-              <li style="margin: 6px 0;">Base para recursos avançados (exportação, múltiplas contas)</li>
-              <li style="margin: 6px 0;">Prioridade em melhorias</li>
+            <ul class="plan-list">
+              <li>Pacote Plus</li>
+              <li>Projeção de saldo</li>
+              <li>Relatórios simples</li>
             </ul>
-            <div style="height:16px"></div>
-            <div class="hero-actions" style="gap:10px;">
-              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=pro'">Escolher Pro</a>
-              <a class="btn btn-ghost" href="pricing.html#pro">Ver detalhes</a>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="javascript:void(0)" data-go="register-pro">Quero o Pro</a> 
+              <a class="btn btn-ghost" href="pricing.html#comparativo">Comparar planos</a>
+              <div class="plan-micro">Ideal para quem precisa planejar o mês com projeção e relatórios.</div>
             </div>
           </div>
         </div>
 
+        <div class="cta cta-tight">
+          <div>
+            <h2>Quer comparar tudo em uma tabela?</h2>
+            <p>Veja o comparativo completo de funcionalidades e escolha o plano ideal.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="pricing.html#comparativo">Abrir comparativo</a>
+            <a class="btn btn-ghost" href="javascript:void(0)" data-go="register-plus">Criar conta</a>
+          </div>
+        </div>
       </section>
 
-      <section class="section" id="fluxo">
-        <h2 class="section-title">Fluxo simples, resultados claros</h2>
+      <section class="section" id="compra">
+        <h2 class="section-title">Como comprar e ativar</h2>
         <p class="section-subtitle">
-          O sistema organiza o que entra, o que sai e o que ainda está pendente, permitindo decisões
-          rápidas sem planilhas complexas.
+          O fluxo é direto. Isso ajuda a manter o acesso vinculado ao seu login e garantir ativação automática.
         </p>
-        <div class="steps">
+
+        <div class="steps steps-tight">
           <div class="step">
             <span>Passo 1</span>
-            <h3>Registre entradas</h3>
-            <p>Adicione receitas com data e descrição para manter o histórico completo.</p>
+            <h3>Crie sua conta</h3>
+            <p>Escolha um plano e preencha nome, e-mail, CPF/CNPJ e telefone.</p>
           </div>
           <div class="step">
             <span>Passo 2</span>
-            <h3>Controle despesas</h3>
-            <p>Defina status e data de pagamento real para acompanhar o ciclo com precisão.</p>
+            <h3>Confirme o e-mail</h3>
+            <p>Você recebe um link de verificação para liberar o acesso ao sistema.</p>
           </div>
           <div class="step">
             <span>Passo 3</span>
-            <h3>Veja o saldo projetado</h3>
-            <p>O resumo de ciclo mostra o saldo anterior, despesas pendentes e projeção final.</p>
+            <h3>Pague via PIX</h3>
+            <p>O checkout acontece pelo AbacatePay e o plano é ativado no seu usuário.</p>
           </div>
+        </div>
+
+        <div class="callout">
+          <strong>Importante:</strong>
+          <span>para iniciar o checkout é necessário ter <b>conta verificada</b> e dados completos (nome, CPF/CNPJ e telefone).</span>
         </div>
       </section>
 
-      <section class="section" id="seguranca">
-        <h2 class="section-title">Confiabilidade para uso diário</h2>
-        <p class="section-subtitle">
-          Estrutura pronta para produção com banco Postgres (Neon), autenticação segura e
-          disponibilidade contínua para você acessar quando precisar.
-        </p>
-        <div class="stats">
-          <div class="stat">
-            <strong>Login protegido</strong>
-            <span>Verificação de e-mail para impedir acessos indevidos.</span>
-          </div>
-          <div class="stat">
-            <strong>Banco robusto</strong>
-            <span>Postgres com conexões seguras e backups no provedor.</span>
-          </div>
-          <div class="stat">
-            <strong>Deploy estável</strong>
-            <span>Hospedagem escalável para manter o app rápido e sempre online.</span>
-          </div>
+      <section class="section" id="faq">
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <p class="section-subtitle">As dúvidas mais comuns antes de começar.</p>
+
+        <div class="faq-grid">
+          <details class="faq-item">
+            <summary>O que muda entre Básico, Plus e Pro?</summary>
+            <div class="faq-body">
+              <p><b>Básico</b> foca em lançamentos e visão do mês. <b>Plus</b> libera gráficos, insights e regras/automação. <b>Pro</b> adiciona projeção e relatórios.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Preciso criar conta antes de pagar?</summary>
+            <div class="faq-body">
+              <p>Sim. A compra fica vinculada ao seu login e o plano é ativado automaticamente após confirmação do pagamento.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como funciona a verificação de e-mail?</summary>
+            <div class="faq-body">
+              <p>Após o cadastro, você recebe um e-mail com link de verificação. Isso protege seu acesso e libera o uso completo do sistema.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso fazer upgrade depois?</summary>
+            <div class="faq-body">
+              <p>Sim. Quando seu uso evoluir, você pode mudar de plano e liberar novas funcionalidades.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Funciona no celular?</summary>
+            <div class="faq-body">
+              <p>Sim. O sistema é web e funciona no navegador do celular, tablet e computador.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como falar com suporte?</summary>
+            <div class="faq-body">
+              <p>Você pode colocar seu e-mail/WhatsApp de suporte aqui (no rodapé). O layout já está pronto para isso.</p>
+            </div>
+          </details>
         </div>
 
-        <div class="cta" id="contato">
+        <div class="cta cta-tight" id="contato">
           <div>
             <h2>Pronto para organizar seu dinheiro com clareza?</h2>
-            <p>Crie sua conta e comece em minutos. Você pode trocar de plano quando quiser.</p>
+            <p>Crie sua conta e comece em minutos.</p>
           </div>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="pricing.html">Escolher plano</a>
-            <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar no sistema</a>
+            <a class="btn btn-primary" href="javascript:void(0)" data-go="register-plus">Criar conta</a>
+            <a class="btn btn-ghost" href="javascript:void(0)" data-go="login">Entrar</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="container footer">
-      <span>Controle Financeiro · Todos os direitos reservados</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo-recorte2.png" alt="Controle Financeiro" />
+          <div>
+            <strong>Controle Financeiro</strong>
+            <div class="muted">Orçamento pessoal simples e moderno.</div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="pricing.html">Planos</a>
+          <a href="privacy.html">Privacidade</a>
+          <a href="terms.html">Termos</a>
+        </div>
+
+        <div class="footer-meta">
+          <div class="muted">Pagamento via PIX (AbacatePay)</div>
+          <div class="muted">© <span id="year"></span> Controle Financeiro</div>
+        </div>
+      </div>
     </footer>
   </div>
+
   <script src="assets/js/config.js"></script>
+  <script src="assets/js/marketing.js"></script>
 </body>
 </html>

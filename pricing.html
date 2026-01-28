@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/img/logo-recorte2.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/img/logo-recorte2.png" />
+
   <title>Planos e Preços | Controle Financeiro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/marketing.css">
+  <meta name="description" content="Compare planos do Controle Financeiro. Escolha Básico, Plus ou Pro. Pagamento via PIX e ativação no seu login." />
+  <meta name="theme-color" content="#0f0f0f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/marketing.css" />
 </head>
 <body>
   <div class="page">
     <header class="container header">
       <div class="brand">
-        <a href="index.html" style="display:flex; gap:10px; align-items:center; text-decoration:none;">
-          <img src="assets/img/logo-recorte2.png" alt="Logo do sistema">
-          <img src="assets/img/nome_logo-recorte2.png" alt="Controle Financeiro">
+        <a href="index.html" class="brand-link" aria-label="Voltar ao início">
+          <img src="assets/img/logo-recorte2.png" alt="Logo do Controle Financeiro" />
+          <img src="assets/img/nome_logo-recorte2.png" alt="Controle Financeiro" />
         </a>
       </div>
 
-      <nav class="nav">
-        <a href="index.html#recursos">Recursos</a>
-        <a href="index.html#planos">Planos</a>
-        <a href="index.html#fluxo">Como funciona</a>
-        <a href="index.html#seguranca">Segurança</a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegação">
+        <div class="nav-links">
+          <a href="index.html#recursos">Recursos</a>
+          <a href="index.html#produto">Produto</a>
+          <a href="pricing.html">Preços</a>
+          <a href="#comparativo">Comparativo</a>
+          <a href="index.html#compra">Como comprar</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+
         <div class="nav-actions">
-          <a class="btn btn-ghost btn-sm" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
-          <a class="btn btn-primary btn-sm" href="index.html#planos">Escolher plano</a>
+          <a class="btn btn-ghost btn-sm" href="javascript:void(0)" data-go="login">Entrar</a>
+          <a class="btn btn-primary btn-sm" href="javascript:void(0)" data-go="register-plus">Criar conta</a>
         </div>
       </nav>
     </header>
@@ -37,100 +50,192 @@
         <h2 class="section-title">Planos que crescem com você</h2>
         <p class="section-subtitle">Escolha um plano, pague via PIX (AbacatePay) e ative no seu login.</p>
 
-        <div class="feature-grid" style="margin-top: 24px;">
-          <div class="feature-card" style="border-radius: 22px;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+        <div class="plan-grid">
+          <div class="plan-card" id="basic">
+            <div class="plan-head">
               <div>
-                <h3 style="font-size:18px;">Básico</h3>
-                <p style="margin-top:6px; color: var(--muted);">Ideal para uso pessoal e organização.</p>
+                <h3 class="plan-name">Básico</h3>
+                <p class="plan-tagline">Quem precisa do essencial no dia a dia.</p>
               </div>
-              <div style="text-align:right;">
-                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 14.90</div>
-                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              <div class="plan-price">
+                <div class="plan-value">R$ 14,90</div>
+                <div class="plan-period">por mês</div>
               </div>
             </div>
-            <div style="height:12px"></div>
-            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
-              <li style="margin: 6px 0;">Controle de receitas e despesas</li>
-              <li style="margin: 6px 0;">Resumo mensal e saldo</li>
-              <li style="margin: 6px 0;">Categorias básicas</li>
+            <ul class="plan-list">
+              <li>Dashboard com visão geral do mês</li>
+              <li>Resumo mensal de entradas e saídas</li>
+              <li>Lançamentos de receitas e despesas</li>
             </ul>
-            <div style="height:16px"></div>
-            <div class="hero-actions" style="gap:10px;">
-              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=basic'">Escolher Básico</a>
-              <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="javascript:void(0)" data-go="register-basic">Criar conta no Básico</a>
+              <a class="btn btn-ghost" href="index.html#planos">Ver no site</a>
             </div>
           </div>
 
-          <div class="feature-card" id="plus" style="border-radius: 22px; border-color: rgba(60,200,120,0.35);">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+          <div class="plan-card plan-popular" id="plus">
+            <div class="plan-badge">Mais popular</div>
+            <div class="plan-badge-sub">Recomendado para a maioria</div>
+            <div class="plan-head">
               <div>
-                <h3 style="font-size:18px;">Plus</h3>
-                <p style="margin-top:6px; color: var(--muted);">Ideal para análises e filtros avançados.</p>
+                <h3 class="plan-name">Plus</h3>
+                <p class="plan-tagline">Insights e automação inteligente.</p>
               </div>
-              <div style="text-align:right;">
-                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 29.90</div>
-                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              <div class="plan-price">
+                <div class="plan-value">R$ 29,90</div>
+                <div class="plan-period">por mês</div>
               </div>
             </div>
-            <div style="height:12px"></div>
-            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
-              <li style="margin: 6px 0;">Gráficos mensais e anuais</li>
-              <li style="margin: 6px 0;">Comparação de períodos</li>
-              <li style="margin: 6px 0;">Filtros avançados no histórico</li>
-              <li style="margin: 6px 0;">Projeção de saldo</li>
-              <li style="margin: 6px 0;">Relatórios simples</li>
+            <ul class="plan-list">
+              <li>Gráficos mensais e anuais</li>
+              <li>Insights e variações do período</li>
+              <li>Regras e automação no histórico</li>
             </ul>
-            <div style="height:16px"></div>
-            <div class="hero-actions" style="gap:10px;">
-              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=plus'">Escolher Plus</a>
-              <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="javascript:void(0)" data-go="register-plus">Criar conta no Plus</a>
+              <a class="btn btn-ghost" href="#comparativo">Comparar</a>
             </div>
           </div>
 
-          <div class="feature-card" id="pro" style="border-radius: 22px;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+          <div class="plan-card" id="pro">
+            <div class="plan-head">
               <div>
-                <h3 style="font-size:18px;">Pro</h3>
-                <p style="margin-top:6px; color: var(--muted);">Ideal para quem quer prioridade e evolução.</p>
+                <h3 class="plan-name">Pro</h3>
+                <p class="plan-tagline">Planejamento completo com projeção e relatórios.</p>
               </div>
-              <div style="text-align:right;">
-                <div style="font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700;">R$ 49.90</div>
-                <div style="font-size:12px; color: var(--muted);">por mês</div>
+              <div class="plan-price">
+                <div class="plan-value">R$ 49,90</div>
+                <div class="plan-period">por mês</div>
               </div>
             </div>
-            <div style="height:12px"></div>
-            <ul style="margin:0; padding-left: 18px; color: var(--muted); font-size:14px;">
-              <li style="margin: 6px 0;">Tudo do Plus</li>
-              <li style="margin: 6px 0;">Base para recursos avançados (exportação, múltiplas contas)</li>
-              <li style="margin: 6px 0;">Prioridade em melhorias</li>
+            <ul class="plan-list">
+              <li>Pacote Plus</li>
+              <li>Projeção de saldo</li>
+              <li>Relatórios simples</li>
             </ul>
-            <div style="height:16px"></div>
-            <div class="hero-actions" style="gap:10px;">
-              <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/buy?plan=pro'">Escolher Pro</a>
-              <a class="btn btn-ghost" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar</a>
+            <div class="plan-actions">
+              <a class="btn btn-primary" href="javascript:void(0)" data-go="register-pro">Quero o Pro</a>
+              <a class="btn btn-ghost" href="#comparativo">Comparar</a>
+              <div class="plan-micro">Ideal para quem precisa planejar o mês com projeção e relatórios.</div>
             </div>
           </div>
         </div>
 
-        <div class="cta" style="margin-top: 28px;">
+        <div class="cta cta-tight">
           <div>
-            <h2>Pagamento via PIX e ativação automática</h2>
-            <p>Após o pagamento, você cria sua conta ou entra para ativar o plano automaticamente no sistema.</p>
+            <h2>Ativação automática no seu usuário</h2>
+            <p>Após o pagamento, o plano fica associado ao seu login e libera as funcionalidades do seu nível.</p>
           </div>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="javascript:void(0)" onclick="location.href=window.APP_BASE_URL + '/login'">Entrar no sistema</a>
-            <a class="btn btn-ghost" href="index.html">Voltar</a>
+            <a class="btn btn-primary" href="javascript:void(0)" data-go="register-plus">Criar conta</a>
+            <a class="btn btn-ghost" href="javascript:void(0)" data-go="login">Entrar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="comparativo" style="padding-top: 10px;">
+        <h2 class="section-title">Comparativo completo</h2>
+        <p class="section-subtitle">
+          Transparência total: o que cada plano libera hoje. (Os recursos seguem a configuração do seu sistema.)
+        </p>
+
+        <div class="compare" role="region" aria-label="Tabela comparativa de planos">
+          <table>
+            <thead>
+              <tr>
+                <th>Funcionalidade</th>
+                <th><span class="pill-col"><span class="plan-pill">Básico</span></span></th>
+                <th><span class="pill-col"><span class="plan-pill popular">Plus</span></span></th>
+                <th><span class="pill-col"><span class="plan-pill">Pro</span></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="feat">Dashboard (visão do mês)</td>
+                <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Lançamentos (receitas e despesas)</td>
+                <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Resumo mensal</td>
+                <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Gráficos mensais e anuais</td>
+                <td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Insights do período</td>
+                <td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Filtros avançados no histórico</td>
+                <td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Regras &amp; automações</td>
+                <td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Projeção de saldo</td>
+                <td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
+              </tr>
+              <tr>
+                <td class="feat">Relatórios simples</td>
+                <td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <strong>Observação:</strong>
+          <span>
+            Para iniciar o checkout é necessário ter <b>conta verificada</b> e dados completos (nome, CPF/CNPJ e telefone).
+            Isso garante ativação automática no seu usuário.
+          </span>
+        </div>
+
+        <div class="cta cta-tight">
+          <div>
+            <h2>Começar agora</h2>
+            <p>Recomendação para a maioria: <b>Plus</b> (gráficos, insights e automação).</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="javascript:void(0)" data-go="register-plus">Criar conta no Plus</a>
+            <a class="btn btn-ghost" href="index.html">Voltar ao site</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="container footer">
-      <span>Controle Financeiro · Todos os direitos reservados</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo-recorte2.png" alt="Controle Financeiro" />
+          <div>
+            <strong>Controle Financeiro</strong>
+            <div class="muted">Orçamento pessoal simples e moderno.</div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html#planos">Planos</a>
+          <a href="privacy.html">Privacidade</a>
+          <a href="terms.html">Termos</a>
+        </div>
+
+        <div class="footer-meta">
+          <div class="muted">Pagamento via PIX (AbacatePay)</div>
+          <div class="muted">© <span id="year"></span> Controle Financeiro</div>
+        </div>
+      </div>
     </footer>
   </div>
 
   <script src="assets/js/config.js"></script>
+  <script src="assets/js/marketing.js"></script>
 </body>
 </html>
